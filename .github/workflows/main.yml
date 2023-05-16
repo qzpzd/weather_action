@@ -12,7 +12,7 @@ jobs:
     steps:
     # 首先copy git仓库到虚拟机上
       - name: 'Checkout codes'
-        uses: actions/checkout@v3
+        uses: actions/checkout@v1
     # 执行仓库中的脚本文件
       - name: 'Get Weather'
         run: bash ./weather.sh
@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
           body: file://result.html
-          to: 1198718068@qq.com
+          to: qzpzd1227@163.com
           from: GitHub Actions
           content_type: text/html

@@ -4,7 +4,7 @@ on:
   push:
   schedule:
   # 定时任务，在每天的5点推送天气信息到邮箱
-    - cron: '11 23 * * *'
+    - cron: '27 23 * * *'
 
 jobs:
   bot:
@@ -31,6 +31,6 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
           body: file://result.html
-          to: qzpzd1227@163.com
+          to: 1198718068@qq.com
           from: GitHub Actions
           content_type: text/html

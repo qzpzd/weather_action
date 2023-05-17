@@ -4,7 +4,7 @@ on:
   push:
   schedule:
   # 定时任务，在每天的5点推送天气信息到邮箱
-    - cron: '04 23 * * *'
+    - cron: '38 23 * * *'
 
 jobs:
   bot:
@@ -28,8 +28,8 @@ jobs:
           server_address: smtp.163.com
           server_port: 465
           # 这些sectret的环境变量需要配置在setting中的secret下
-          username: ${{ secrets.MAILUSERNAME }}
-          password: ${{ secrets.MAILPASSWORD }}
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
           body: file://result.html
           to: 1198718068@qq.com

@@ -29,8 +29,8 @@ jobs:
           server_port: 465
           # 这些sectret的环境变量需要配置在setting中的secret下
           sender: guzhongyue666
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+          username: ${{ secrets.MAILUSERNAME }}
+          password: ${{ secrets.MAILPASSWORD }}
           subject: 天气预报 (${{env.REPORT_DATE}})
           body: file://result.html
           to: 1198718068@qq.com

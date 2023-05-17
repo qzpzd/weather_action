@@ -4,7 +4,7 @@ on:
   push:
   schedule:
   # 定时任务，在每天的5点推送天气信息到邮箱
-    - cron: '40 22 * * *'
+    - cron: '04 23 * * *'
 
 jobs:
   bot:
@@ -20,8 +20,8 @@ jobs:
       - name: 'Get Date'
         run: echo "REPORT_DATE=$(TZ=':Asia/Shanghai' date '+%Y-%m-%d %T')" >> $GITHUB_ENV
       # 使用现成的发送邮箱的GitHub action来发送邮件
-      - name: 'Send Mail'
-        uses: dawidd6/action-send-mail@v3
+      - name: 'Send mail'
+        uses: dawidd6/action-send-mail@master
         with:
           # 这些是发送邮件需要配置的参数，更多详细的说明请访问具体的仓库
           server_address: smtp.163.com

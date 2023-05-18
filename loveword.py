@@ -36,7 +36,7 @@ def getlovewords():
     }
     # 获取情话
     texts=[]
-    for page in range(2,4):
+    for page in range(2,3):
         time.sleep(3)
         # proxy = ips[random.randint(0, len(ips) - 1)]
         # print(proxy)
@@ -45,7 +45,7 @@ def getlovewords():
             response = requests.get(url,headers=headers)
             soup=BeautifulSoup(response.text,'lxml')
             lovewordslist=soup.find('div',class_='list-short-article').find_all('a',target='_blank')
-            # print(lovewordslist)
+            print(lovewordslist)
             texts.extend([lovewordslist[i].text for i in range(len(lovewordslist))])
         except:
             print("连接失败")

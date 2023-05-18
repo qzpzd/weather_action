@@ -65,9 +65,9 @@ def CoolPush(info): #CoolPush酷推
     if(r.status_code==200):
         print("推送成功")
 if __name__ == '__main__':
-    str1='早安老婆\n'+getlovewords()
-    str2='早安老婆\n'+getlovewords()
-    str3='早安老婆\n'+getlovewords()
+    str1=getlovewords()
+    str2=getlovewords()
+    str3=getlovewords()
     print(str1)
     print(str2)
     print(str3)

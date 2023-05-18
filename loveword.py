@@ -30,7 +30,7 @@ def getIP():
 
         print("正在准备IP代理，请稍后。。。")
 def getlovewords():
-        getIP()
+    getIP()
     headers={
         'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36'
     }

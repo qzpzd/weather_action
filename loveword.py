@@ -61,7 +61,8 @@ def CoolPush(info): #CoolPush酷推
     # api='https://push.xuthus.cc/send/{}'.format(SKEY)
     api = 'https://qmsg.zendee.cn/send/{}'.format(SKEY)
     print(info)
-    r=requests.post(api, info.encode('utf-8'))
+    data={"msg":info.encode('utf-8'),"qq":"1198718068"}
+    r=requests.post(api, data=data)
     if(r.status_code==200):
         print("推送成功")
 if __name__ == '__main__':

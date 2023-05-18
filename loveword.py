@@ -40,7 +40,7 @@ def getlovewords():
         time.sleep(3)
         # proxy = ips[random.randint(0, len(ips) - 1)]
         # print(proxy)
-        url = 'https://www.duanwenxue.com/huayu/tianyanmiyu/list_{}.html'.format(page)
+        url = 'https://www.duanwenxue.com/yulu/aiqingduanyu/list_{}.html'.format(page)
         try:
             response = requests.get(url,headers=headers)
             soup=BeautifulSoup(response.text,'lxml')

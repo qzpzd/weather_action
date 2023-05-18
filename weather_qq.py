@@ -30,7 +30,6 @@ def CoolPush(info): #CoolPush酷推
     # cpurl = 'https://push.xuthus.cc/send/' + SKey  # 推送到个人QQ
     # api='https://push.xuthus.cc/send/{}'.format(SKey)
     api='https://qmsg.zendee.cn/send/{}'.format(SKey)
-    #api = 'https://qmsg.zendee.cn/send/f23b350ecf7ad9dad56c3f96943f7676'
     print(api)
     print(info)
     data={"msg":info.encode('utf-8'),"qq":"1198718068"}
@@ -38,7 +37,7 @@ def CoolPush(info): #CoolPush酷推
 def main():
     try:
         api = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
-        city_code = '101040800'   #进入https://where.heweather.com/index.html查询你的城市代码
+        city_code = '101200101'   #进入https://where.heweather.com/index.html查询你的城市代码
         tqurl = api + city_code
         response = requests.get(tqurl)
         d = response.json()         #将数据以json形式返回，这个d就是返回的json数据

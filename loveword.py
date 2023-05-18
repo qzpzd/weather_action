@@ -36,7 +36,7 @@ def getlovewords():
     }
     # 获取情话
     texts=[]
-    for page in range(1,2):
+    for page in range(2,4):
         time.sleep(3)
         # proxy = ips[random.randint(0, len(ips) - 1)]
         # print(proxy)

@@ -43,7 +43,9 @@ def getlovewords():
         url = 'https://www.duanwenxue.com/huayu/jili/list_{}.html'.format(page)
         try:
             response = requests.get(url,headers=headers)
+            print(response)
             soup=BeautifulSoup(response.text,'lxml')
+            print(soup)
             lovewordslist=soup.find('div',class_='list-short-article').find_all('a',target='_blank')
             print(lovewordslist)
             texts.extend([lovewordslist[i].text for i in range(len(lovewordslist))])

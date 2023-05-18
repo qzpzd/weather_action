@@ -33,8 +33,7 @@ def CoolPush(info): #CoolPush酷推
     api = 'https://qmsg.zendee.cn/send/f23b350ecf7ad9dad56c3f96943f7676'
     print(api)
     print(info)
-    data={"msg":info.encode('utf-8'),
-         "qq":"1198718068"}
+    data={"msg":info,"qq":"1198718068"}
     requests.post(api, data=data)
 def main():
     try:

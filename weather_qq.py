@@ -32,7 +32,7 @@ def CoolPush(info): #CoolPush酷推
     api='https://qmsg.zendee.cn/send/{}'.format(SKey)
     print(api)
     print(info)
-    data={"msg":info.encode('utf-8'),"qq":"1944284409"}
+    data={"msg":info.encode('utf-8'),"qq":"1198718068"}
     requests.post(api, data=data)
 def main():
     try:

@@ -9,7 +9,8 @@ ips = []  # 装载有效 IP
 def getIP():
     for i in range(1, 5):
         headers = {
-            "User-Agent": UserAgent().chrome  # chrome浏览器随机代理
+            'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36'
+#             "User-Agent": UserAgent().chrome  # chrome浏览器随机代理
         }
         ip_url = 'http://www.xiladaili.com/gaoni/{}/'.format(i)
         html = requests.get(url=ip_url, headers=headers).text
@@ -32,7 +33,7 @@ def getIP():
 def getlovewords():
     #getIP()
     headers={
-        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 Edg/108.0.1462.46'
+        'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Mobile Safari/537.36'
     }
     # 获取情话
     texts=[]
@@ -63,18 +64,18 @@ def CoolPush(info): #CoolPush酷推
     # api='https://push.xuthus.cc/send/{}'.format(SKEY)
     api = 'https://qmsg.zendee.cn/send/f23b350ecf7ad9dad56c3f96943f7676'
     print(info)
-    data={"msg":info.encode('utf-8'),"qq":"1944284409"}
+    data={"msg":info.encode('utf-8'),"qq":"1198718068"}
     r=requests.post(api, data=data)
     if(r.status_code==200):
         print("推送成功")
 if __name__ == '__main__':
     str1=getlovewords()
-    #str2=getlovewords()
-    #str3=getlovewords()
+    str2=getlovewords()
+    str3=getlovewords()
     #print(str1)
     #print(str2)
     #print(str3)
     #str1="测试"
     CoolPush(str1)
-    #CoolPush(str2)
-    #CoolPush(str3)
+    CoolPush(str2)
+    CoolPush(str3)
